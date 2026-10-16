@@ -1,0 +1,99 @@
+/* Общий стиль для страницы */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* Заголовок */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Навигация по вкладкам */
+nav {
+    text-align: center;
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Контейнеры для вкладок */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.tab-content {
+    display: none;
+    width: 100%;
+    text-align: center;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Стиль для канвасов */
+canvas {
+    border: 1px solid #ccc;
+    margin: 20px auto;
+    display: block;
+}
+
+/* Центрирование панели управления */
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    gap: 15px;
+}
+
+/* Кнопки панели управления */
+.controls button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* Эффект наведения на кнопки панели управления */
+.controls button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Для маленьких экранов */
+@media (max-width: 768px) {
+    .controls {
+        flex-direction: column; /* Расположение кнопок в колонку на мобильных устройствах */
+    }
+
+    .controls button {
+        width: 80%;
+        margin: 10px 0;
+    }
+}

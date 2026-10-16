@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Свечной анализ паттернов</title>
+
+    <!-- Подключение CSS стилей для оформления страницы -->
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <header>
+        <!-- Заголовок страницы -->
+        <h1>Анализ паттернов свечного графика</h1>
+    </header>
+
+    <!-- Панель навигации по вкладкам -->
+    <nav>
+        <!-- Кнопка для вкладки "Общий график", активна по умолчанию -->
+        <button id="btn-tab-1" class="active">Общий график</button>
+        <!-- Кнопка для вкладки "Паттерны" -->
+        <button id="btn-tab-2">Паттерны</button>
+        <!-- Кнопка для переключения отображения будущих свечей -->
+        <button id="toggle-future">Показать будущее</button>
+    </nav>
+
+    <!-- Панель управления графиком -->
+    <div class="controls">
+        <!-- Кнопка для показа/скрытия подписей паттернов -->
+        <button id="toggle-labels">Показать/скрыть подписи</button>
+        <!-- Кнопка для приближения графика -->
+        <button id="zoom-in">Приблизить</button>
+        <!-- Кнопка для отдаления графика -->
+        <button id="zoom-out">Отдалить</button>
+        <!-- Кнопка для сброса состояния масштаба и панорамирования графика -->
+        <button id="reset-chart">Сбросить график</button>
+    </div>
+
+    <!-- Контейнер для вкладок -->
+    <div class="tabs">
+        <!-- Первая вкладка с общим графиком (отображается по умолчанию) -->
+        <div id="tab-1" class="tab-content active">
+            <!-- Холст для отрисовки основного графика -->
+            <canvas id="main-chart" width="1200" height="800"></canvas>
+        </div>
+
+        <!-- Вторая вкладка с графиками паттернов (скрыта по умолчанию) -->
+        <div id="tab-2" class="tab-content">
+            <!-- Холст для отрисовки графиков паттернов -->
+            <canvas id="candlestick-chart" width="1200" height="1800"></canvas>
+        </div>
+    </div>
+
+    <!-- Подключение JavaScript файлов.
+         Важно подключать их в следующем порядке:
+         1. Основная логика (main_logic.js)
+         2. Отрисовка основного графика (draw_main_chart.js)
+         3. Отрисовка графика паттернов (draw_patterns_chart.js)
+     -->
+    <script src="static/main_logic.js"></script>      <!-- Основная логика работы графика и обработчики событий -->
+    <script src="static/draw_main_chart.js"></script> <!-- Функции для отрисовки основного графика -->
+    <script src="static/draw_patterns_chart.js"></script> <!-- Функции для отрисовки графика паттернов -->
+</body>
+</html>
